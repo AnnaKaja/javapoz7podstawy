@@ -18,6 +18,7 @@ public class Loops {
         for (int i = 0; i < 2 * n; i+=2) {
             System.out.println(i + 2);
         }
+        // 123
 
         for (int i = 2; i <= 2 * n; i+=2) {
             System.out.println(i);
