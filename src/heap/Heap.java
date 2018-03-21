@@ -6,6 +6,7 @@ import java.util.List;
 public class Heap {
 
     private List<Integer> values = new ArrayList<>();
+    public int getSize;
 
     public void add(Integer value) {
         int index = values.size();
@@ -27,6 +28,7 @@ public class Heap {
         int currentIndex = 0;
         int lastValue = values.get(size - 1);
         values.remove(size - 1);
+        if(values.size()>0){
         values.set(currentIndex, lastValue);
         int greatestChildIndex = getGreatestChildIndex(currentIndex);
         while (greatestChildIndex > 0 && values.get(greatestChildIndex) > lastValue) {
@@ -36,7 +38,7 @@ public class Heap {
             values.set(greatestChildIndex, currentValue);
             currentIndex = greatestChildIndex;
             greatestChildIndex = getGreatestChildIndex(currentIndex);
-        }
+        }}
         return currentRoot;
     }
 
@@ -79,5 +81,9 @@ public class Heap {
 
     public void setValues(List<Integer> values) {
         this.values = values;
+    }
+    public int getSize() {
+        return values.size();
+
     }
 }
