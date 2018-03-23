@@ -2,8 +2,8 @@ package various;
 
     public class Nwd {
         public static void main(String[] args) {
-            int number1 = 32;
-            int number2 = 64;
+            int number1 = 8;
+            int number2 = 6;
 
             System.out.println(commonDivider(number1, number2));
 
